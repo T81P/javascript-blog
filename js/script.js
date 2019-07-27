@@ -9,7 +9,7 @@ const templates = {
   authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
   tagCloudLink: Handlebars.compile(document.querySelector('#template-tagCloud-link').innerHTML),
   authorCloudLink: Handlebars.compile(document.querySelector('#template-authorCloud-link').innerHTML),
-}
+};
 
 const titleClickHandler = function(event){
   event.preventDefault();
@@ -357,9 +357,9 @@ const titleClickHandler = function(event){
       /* [NEW] generatee code of a link and add it to allAuthorTagsHTML */
       //allAuthorTagsHTML += '<li><a href="#author-' + tag + '"><span>' + tag + ' (' + allAuthorTags[tag] + ')' + '</span></a></li>';
       allAuthorsData.authors.push({
-      	author: author,
-      	count: allAuthorTags[author],
-      })
+        author: author,
+        count: allAuthorTags[author],
+      });
       /* [NEW] END LOOP: for each tag in allAuthorTags */
     }
     authorTagList.innerHTML = templates.authorCloudLink(allAuthorsData);
